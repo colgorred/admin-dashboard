@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #112d4e;
+  --navy2: #18375a;
+  --darkblue: #3f72af;
+  --lightblue: #dbe2ef;
+  --white: #f9f7f7;
+  --gray: rgb(185, 188, 211);
+  --lightgray: rgb(224, 224, 224);
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 220px 2fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 94%;
+}
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100vh;
+  background: var(--navy);
+  color: var(--gray);
+}
+
+ul {
+  padding-left: 1px;
+  list-style-type: none;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  border-left: 5px solid var(--navy);
+}
+
+.sidebar li:hover {
+  background: var(--navy2);
+  border-left: 5px solid var(--gray);
+}
+
+.sidebar i {
+  margin-left: 25px;
+  min-width: 25px;
+  margin-right: 10px;
+}
+
+h2 {
+  color: var(--white);
+  font-weight: 600;
+  transform: scale(1, 0.9);
+  font-size: 1.6em;
+}
+
+.bell:hover {
+  cursor: pointer;
+}
+.logo {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.header {
+  grid-column: 2/-1;
+  grid-row: 1;
+  margin: 0.8rem 1.5rem;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+.search-input {
+  border: none;
+  border-radius: 10px;
+  height: 28px;
+  width: 100%;
+  padding: 2px 15px 2px 15px;
+  outline: 0;
+  background-color: var(--lightgray);
+}
+.header form {
+  margin-left: 0.5rem;
+  width: 50vw;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 39vw;
+}
+.profile-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+  width: 25vw;
+  font-size: 1.1em;
+}
+
+input[type="search"] {
+  font-size: 1.2rem;
+}
+.profile-img {
+  width: 50px;
+
+  border-radius: 50%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #fff;
+  background-image: linear-gradient(90deg, #ff8a00, rgb(252, 185, 0));
+  padding: 3px;
+  transition: 250ms ease;
+}
+.fa-magnifying-glass {
+  color: var(--gray);
+}
+
+.fa-magnifying-glass:hover {
+  cursor: pointer;
+}
+.profile-img:hover {
+  background: var(--navy);
+  cursor: pointer;
+}
+.name {
+  padding: 0 1em;
+  border-left: 2px solid var(--gray);
+}
+
+.bell {
+  color: var(--gray);
+}
+.info-cards {
+  display: grid;
+  grid-column: 2/-1;
+  grid-row: 2;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  margin: 0.9rem 1.5rem;
+}
+.info-card {
+  border: 2px solid var(--lightgray);
+  border-radius: 0.5rem;
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 1.2rem 0;
+}
+
+.info-card:hover {
+  border: 2px solid var(--darkblue);
+}
+
+.info-card > p:first-child {
+  color: #9fa2b4;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.info-card > p:last-child {
+  font-size: 2.25rem;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+.large-cards {
+  grid-column: 2/-1;
+  grid-row: 7/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 0.9rem 1.5rem;
+}
+
+.large-card {
+  border: 2px solid var(--lightgray);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.large-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.large-card-title > a {
+  color: #3751ff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease-in-out;
+}
+
+.large-card-header {
+  padding: 1rem;
+}
+.stats-panel {
+  display: flex;
+  grid-column: 2;
+  grid-row: 3/7;
+  border: 2px solid var(--lightgray);
+  border-radius: 0.5rem;
+  background: #fff;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.top-chart {
+  grid-column: 3;
+  grid-row: 3/7;
+  border: 2px solid var(--lightgray);
+  border-radius: 0.5rem;
+  background: #fff;
+  margin: 0 1.5rem;
+  padding: 1rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+.stats-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stats-img {
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
