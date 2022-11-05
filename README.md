@@ -5,4 +5,4 @@ An Admin Dashboard built using vanilla HTML and CSS. This project was built with
 
 From [The Odin Project](https://www.theodinproject.com) curriculum.
 
-[Live Demo]()
+[Live Demo](https://colgorred.github.io/admin-dashboard/)
